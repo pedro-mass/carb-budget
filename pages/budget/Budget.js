@@ -1,12 +1,12 @@
+import { css } from '@emotion/react'
+
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { createId } from '../../utils'
 import { LogForm } from './LogForm'
 import { LogEntry } from './LogEntry'
 
-export default function Budget() {
-  const maxCarbs = 1000 // pedro: fix this hardCoding
-  const [remainingCarbs, setRemainingCarbs] = useState(0)
+const useLogs = () => {
   const [logs, setLogs] = useState([])
 
   const addLog = log =>
@@ -24,6 +24,21 @@ export default function Budget() {
     createdAt: Date.now(),
   })
 
+  return { logs, setLogs, addLog, removeLog, createLog }
+}
+
+const style = {
+  budget: css`
+    color: yellow;
+    background-color: blue;
+  `,
+}
+
+export default function Budget() {
+  const { logs, addLog, removeLog, createLog } = useLogs()
+
+  const maxCarbs = 1000 // pedro: fix this hardCoding
+  const [remainingCarbs, setRemainingCarbs] = useState(0)
   useEffect(
     function calculateCarbs() {
       const currentCarbs = logs
@@ -52,7 +67,7 @@ export default function Budget() {
   }
 
   return (
-    <div>
+    <div css={style.budget}>
       <Head>
         <title>Carb Budget</title>
       </Head>

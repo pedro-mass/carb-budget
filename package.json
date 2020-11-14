@@ -8,9 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^11.0.0",
+    "@emotion/css": "^11.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/server": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "nanoid": "^3.1.16",
     "next": "10.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/ui": "^0.7.2",
+    "@tailwindcssinjs/macro": "^0.17.0",
+    "babel-plugin-macros": "^2.8.0",
+    "tailwindcss": "^1.9.6"
   }
 }
