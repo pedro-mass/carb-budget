@@ -14,3 +14,4 @@
 ## todo
 - [ ] set up a linter
 - [ ] styling
+- [ ] vscode snippet for new React components (incorporate https://www.selbekk.io/blog/2019/06/the-10-component-commandments/)
