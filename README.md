@@ -8,7 +8,7 @@
 
 ## Features
 - tracks
-  - # of successful days (maybe consecutive)
+  - number of successful days (maybe consecutive)
 - carb calculator?
 
 ## todo
